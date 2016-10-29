@@ -1,0 +1,18 @@
+<?php
+/**
+ * Variables / Config File for the leads and contacts management tool
+ * Filename: variables.php 
+ * Make sure it is located in classes directory
+ *                                          lb 04-25-2013
+**/
+$DB = array();
+$DB["host"]   = 'localhost';
+$DB["user"]   = 'user';
+$DB["pass"]   = 'password';
+$DB["dbName"] = 'lcm';
+
+$dbPre = 'lcm_';   // table prefix in database
+
+// Other Constants
+define('SALT', sha1('SomeRandomPhraseThatShouldntChange')); // Password login salt,
+                                                            // changing this value will cause all of your passwords to be invalid.
