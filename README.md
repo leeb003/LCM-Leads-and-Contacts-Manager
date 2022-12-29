@@ -175,4 +175,14 @@ We've used the following images, icons or other files as listed.
 Feel free to contribute to LCM, this item was for sale on CodeCanyon about 5 years ago and is considered stable and is now available to everyone.
 
 ### If you are looking for much more customizable Contact Management solution - take a look at WP Contacts on github [WP Contacts](https://github.com/leeb003/shwcp)
-		
+
+---
+Version 1.4.0 12-29-2020
+- Updated for newer PHP versions (8.x) still a few deprecated notices on export/import
+- Fixed modal width
+- Installation error fixes
+- Updated PHPExcel code but library is discontinued, will consider PHPSpreadsheet in future for export/import functionality		
+
+Version 1.3.8 10-28-2016
+- Original codebase migrated to github from codecanyon
+
