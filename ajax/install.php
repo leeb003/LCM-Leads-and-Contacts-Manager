@@ -91,7 +91,8 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
                 $sql = "ALTER TABLE {$dbPre}contacts CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci";
                 $convert = $db->extQuery($sql);
 
-                // Add Custom Fields to table if needed
+				// Add Custom Fields to table if needed
+				/*
                 $sql = "ALTER TABLE {$dbPre}contacts Add `customField` varchar(255) NOT NULL after `lStatus`";
                 $db->extQuery($sql);
                 $sql = "ALTER TABLE {$dbPre}contacts Add `customField2` varchar(255) NOT NULL after `customField`";
@@ -100,7 +101,7 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
                 $db->extQuery($sql);
                 $sql = "ALTER TABLE {$dbPre}contacts Add `assignedTo` int(11) NOT NULL after `lastModifiedBy`";
                 $db->extQuery($sql);
-
+				*/
                 // lead Notes table
                 $sql = "CREATE TABLE IF NOT EXISTS `{$dbPre}leadNotes` ("
                      . "`id` int(11) NOT NULL AUTO_INCREMENT,"
@@ -232,10 +233,6 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
                      . ") ENGINE=MyISAM  DEFAULT CHARSET=utf8;";
                 $installUsers = $db->extQuery($sql);
 
-                // add ownLeadsOnly if needed
-                $sql = "ALTER TABLE {$dbPre}users Add `ownLeadsOnly` int(11) NOT NULL after `isAdmin`";
-                $db->extQuery($sql);
-
                 // alter and convert to utf-8 for other language support
                 $sql = "ALTER TABLE {$dbPre}users CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci";
                 $convert = $db->extQuery($sql);
@@ -252,7 +249,8 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
                         'created'  => "$dateAdded",
                         'first'    => 'admin',
                         'last'     => 'admin',
-                        'isAdmin'  => '1'
+						'isAdmin'  => '1',
+						'ownLeadsOnly' => '0'
                     );
                     $adminID = $db->insert("{$dbPre}users", $vals);
                 }

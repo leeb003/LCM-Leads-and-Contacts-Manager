@@ -172,7 +172,7 @@ We've used the following images, icons or other files as listed.
 - [jQuery UI Touch Punch](http://touchpunch.furf.com/)
 
 ---
-Feel free to contribute to LCM, this item was for sale on CodeCanyon for the last couple of years and is considered stable and is now available to everyone.
+Feel free to contribute to LCM, this item was for sale on CodeCanyon about 5 years ago and is considered stable and is now available to everyone.
 
-### If you are looking for an excellent WordPress Contact Management solution - take a look at our plugin on CodeCanyon.com [WP Contacts](http://codecanyon.net/item/wp-contacts/11871172?ref=sh-themes)
+### If you are looking for much more customizable Contact Management solution - take a look at WP Contacts on github [WP Contacts](https://github.com/leeb003/shwcp)
 		

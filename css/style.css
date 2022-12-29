@@ -496,7 +496,7 @@ table.leadCategory td {
 
 #basic-modal-content {display:none;}
 #simplemodal-overlay {background-color:#000; cursor:default;}
-#simplemodal-container {width:550px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
+#simplemodal-container {width:750px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
 #simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; margin-bottom:12px; padding:4px 6px 6px;}
 #simplemodal-container a {color:#ddd;}
 #simplemodal-container a.modalCloseImg {background:url(x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}

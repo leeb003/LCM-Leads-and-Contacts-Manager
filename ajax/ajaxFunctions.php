@@ -65,11 +65,7 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
                 $jsonData['msg'] = 'You need at least a first and last name.';
             }
 
-            if(get_magic_quotes_gpc()){                     // Magic Quotes fix
-                $d = stripslashes($_POST['secondaryEmails']);
-            }else{
-                $d = $_POST['secondaryEmails'];
-            }
+            $d = $_POST['secondaryEmails'];
 
             $secondaryEmails1 = array();
             $secondaryEmails = json_decode($d, true);
@@ -797,11 +793,7 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
             break;
 
         case 'saveOrder':               // Save the Column Order
-            if(get_magic_quotes_gpc()){              // Magic quotes messes with the object
-                $d = stripslashes($_POST['order']);
-            }else{
-                $d = $_POST['order'];
-            }
+            $d = $_POST['order'];
             $order = json_decode($d);
             foreach ($order as $row => $field) {
                 $vals = array(

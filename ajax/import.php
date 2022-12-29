@@ -30,11 +30,7 @@ if (isset($_SESSION['token']) && isset($_POST['token']) && $_POST['token'] == $_
 
         case 'continueImport' :                  // Second Step, receive organized columns
             unset($_SESSION['topRow']);
-            if(get_magic_quotes_gpc()){
-                $d = stripslashes($_POST['columnOrder']);
-            }else{
-                $d = $_POST['columnOrder'];
-            }
+            $d = $_POST['columnOrder'];
             $_SESSION['columnOrder'] = json_decode($d, true);
 
             $sql = "select * from {$dbPre}leadSource order by sourceName asc";
